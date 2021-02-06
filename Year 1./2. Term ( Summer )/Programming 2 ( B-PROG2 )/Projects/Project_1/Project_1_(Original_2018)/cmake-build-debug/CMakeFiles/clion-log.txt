@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/raychani1/Documents/Programming/Source_Codes/STU - FEI/Bachelor/Year 1./2. Term ( Summer )/Programming 2 ( B-PROG2 )/Projects/Project_1/Project_1_(Original_2018) Select CMakeLists.txt
