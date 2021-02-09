@@ -21,7 +21,7 @@ Collection of school assignments and projects
 
 ## Year 2. - Term 1.
 
-Programing techniques ( B-PT ) - C++ Course - Sorting Algorithms, Linked Lists, Binary Trees, Basics of OOP Principles
+[Programing techniques ( B-PT )](https://github.com/Raychani1/FEI_STU_Bachelor/tree/main/Year%202./3.%20Term%20(%20Winter%20)/Programing%20techniques%20(%20B-PT%20)) - C++ Course - Sorting Algorithms, Linked Lists, Binary Trees, Basics of OOP Principles
 
 ## Year 2. - Term 2.
 
