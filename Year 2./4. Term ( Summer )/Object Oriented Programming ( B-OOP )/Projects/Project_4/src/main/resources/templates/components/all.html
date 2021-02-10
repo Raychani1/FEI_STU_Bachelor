@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>All Components</title>
+</head>
+<body>
+<h1 style="text-align:center;">All Components</h1>
+<td><a th:href="@{/war-machines/}">
+    <button style="margin-bottom: 10px">All War Machines</button>
+</a></td>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" border="">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">ID</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="component: ${components.values()}">
+        <td th:text="${component.id}" style="text-align:center;"></td>
+        <td th:text="${component.name}" style="text-align:center;"></td>
+        <td><a th:href="@{'/components/id/' + ${component.id}}">
+            <button>Info</button>
+        </a></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+</body>
+</html>
