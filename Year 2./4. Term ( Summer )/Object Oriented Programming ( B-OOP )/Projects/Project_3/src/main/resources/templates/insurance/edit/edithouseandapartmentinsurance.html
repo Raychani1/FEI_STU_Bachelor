@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit House and Apartment Insurance</title>
+
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%; overflow: auto">
+    <h1 style="text-align: center">Edit House and Apartment Insurance</h1>
+    <div>
+        <h4 style="text-align: center">Insurer Information</h4>
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" style="margin-bottom: 20px" border="">
+            <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">ID</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">First name</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Last name</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Personal Number</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">E-mail</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Permanent Address</th>
+                <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Address of Correspondence</th>
+            </tr>
+            </thead>
+            <tbody>
+            <td th:text="${insurer.userID}" style="text-align:center;"></td>
+            <td th:text="${insurer.firstName}" style="text-align:center;"></td>
+            <td th:text="${insurer.lastName}" style="text-align:center;"></td>
+            <td th:text="${insurer.personalNumber}" style="text-align:center;"></td>
+            <td th:text="${insurer.email}" style="text-align:center;"></td>
+            <td th:text="${insurer.permanentAddress.toString()}" style="text-align:center;"></td>
+            <td th:text="${insurer.addressOfCorrespondence.toString()}" style="text-align:center;"></td>
+
+            </tbody>
+        </table>
+    </div>
+    <form action="#" th:action="@{'/users/id/'+ ${houseAndApartmentInsurance.insurer.userID} +'/insurances/id/' + ${houseAndApartmentInsurance.insuranceID} + '/edit-house-and-apartment-insurance/submit'}" th:object="${houseAndApartmentInsurance}" method="post" >
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.dateOfStart">Date of Start<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input" type="datetime-local" id="insurance.dateOfStart" th:field="*{dateOfStart}" />
+            <p th:if="${#fields.hasErrors('dateOfStart')}" th:errors="*{dateOfStart}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.dateOfEnd">Date of End<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input" type="datetime-local" id="insurance.dateOfEnd" th:field="*{dateOfEnd}" />
+            <p th:if="${#fields.hasErrors('dateOfEnd')}" th:errors="*{dateOfEnd}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.grossAmountOfClaims">Gross Amount Of Claims<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input" type="number" id="insurance.grossAmountOfClaims" th:field="*{grossAmountOfClaims}" />
+            <p th:if="${#fields.hasErrors('grossAmountOfClaims')}" th:errors="*{grossAmountOfClaims}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.monthlyPayment">Monthly Payment<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input" type="number" id="insurance.monthlyPayment" th:field="*{monthlyPayment}" />
+            <p th:if="${#fields.hasErrors('monthlyPayment')}" th:errors="*{monthlyPayment}" style="color: red"></p><br>
+        </div>
+        <div>
+            <label class="mdl-textfield__label" for="houseType"style="margin-top: 10px">House Type<sup style="color: red">*</sup></label>
+            <select th:field="*{houseType}" id="houseType" >
+                <option
+                        th:each="housetype: ${house}"
+                        th:value="${housetype} "
+                        th:text="${housetype.getHouse()}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfRealEstate.zipCode">Address of Real Estate : Zip Code<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="addressOfRealEstate.zipCode" th:field="*{addressOfRealEstate.zipCode}" />
+            <p th:if="${#fields.hasErrors('addressOfRealEstate.zipCode')}" th:errors="*{addressOfRealEstate.zipCode}" style="color: red"></p><br>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfRealEstate.townCityName">Address of Real Estate : City name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="addressOfRealEstate.townCityName" th:field="*{addressOfRealEstate.townCityName}" />
+            <p th:if="${#fields.hasErrors('addressOfRealEstate.townCityName')}" th:errors="*{addressOfRealEstate.townCityName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfRealEstate.streetName">Address of Real Estate : Street name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="addressOfRealEstate.streetName" th:field="*{addressOfRealEstate.streetName}" />
+            <p th:if="${#fields.hasErrors('addressOfRealEstate.streetName')}" th:errors="*{addressOfRealEstate.streetName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfRealEstate.houseNumber">Address of Real Estate : House number<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="addressOfRealEstate.houseNumber" th:field="*{addressOfRealEstate.houseNumber}" />
+            <p th:if="${#fields.hasErrors('addressOfRealEstate.houseNumber')}" th:errors="*{addressOfRealEstate.houseNumber}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.valueOfRealEstate;">Value Of Real Estate<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input" type="number" id="insurance.valueOfRealEstate;" th:field="*{valueOfRealEstate}" />
+            <p th:if="${#fields.hasErrors('valueOfRealEstate')}" th:errors="*{valueOfRealEstate}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="insurance.garageInsurance;">Garage Insurance</label>
+            <input class="mdl-textfield__input" type="checkbox" id="insurance.garageInsurance;" th:field="*{garageInsurance}" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised" style="width: fit-content;"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

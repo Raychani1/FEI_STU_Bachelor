@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Web Application</title>
+
+</head>
+
+<body>
+<h1 style="text-align:center;">All Users</h1>
+
+<form action="/users/add" style="margin-bottom: 20px">
+    <input type="submit" value="Add new User"/>
+</form>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" border="">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">ID</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">First name</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Last name</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user: ${users.values()}">
+        <td th:text="${user.userID}" style="text-align:center;"></td>
+        <td th:text="${user.firstName}" style="text-align:center;"></td>
+        <td th:text="${user.lastName}" style="text-align:center;"></td>
+        <td th:text="${user.email}" style="text-align:center;"></td>
+        <td><a th:href="@{'/users/id/' + ${user.userID}}">
+            <button>Info</button>
+        </a></td>
+        <td><a th:href="@{'/users/edit/' + ${user.userID}}">
+            <button>Edit</button>
+        </a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

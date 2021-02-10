@@ -1,0 +1,47 @@
+<!--TODO-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Household Insurance Info</title>
+
+</head>
+<body>
+<h1 style="text-align: center">Household Insurance Info</h1>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" th:object="${insurance}" border="">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Insurance ID</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of Creation</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Insurer</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of Start</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of End</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Gross Amount Of Claims</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Monthly Payment</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">House Type</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Address of Real Estate</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Value of Real Estate</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Household Equipment Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${insurance.insuranceID}" style="text-align:center;"></td>
+    <td th:text="${insurance.dateOfCreation}" style="text-align:center;"></td>
+    <td th:text="${insurance.insurer.firstName} + ' ' + ${insurance.insurer.lastName}" style="text-align:center;"></td>
+    <td th:text="${insurance.dateOfStart}" style="text-align:center;"></td>
+    <td th:text="${insurance.dateOfEnd}" style="text-align:center;"></td>
+    <td th:text="${insurance.grossAmountOfClaims}" style="text-align:center;"></td>
+    <td th:text="${insurance.monthlyPayment}" style="text-align:center;"></td>
+    <td th:text="${insurance.houseType.getHouse()}" style="text-align:center;"></td>
+    <td th:text="${insurance.addressOfRealEstate.toString()}" style="text-align:center;"></td>
+    <td th:text="${insurance.valueOfRealEstate}" style="text-align:center;"></td>
+    <td th:text="${insurance.householdEquipmentValue}" style="text-align:center;"></td>
+    <td>
+        <a th:href="@{'/users/id/'+${insurance.insurer.userID}+'/insurances/id/' + ${insurance.insuranceID} + '/edit-insurance'}">
+            <!--            +${user.userID}+-->
+            <button>Edit</button>
+        </a></td>
+    </tbody>
+</table>
+</body>
+</html>

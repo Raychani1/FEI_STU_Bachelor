@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+</head>
+<body>
+<h1 style="text-align:center;">User Information</h1>
+
+<form action="/users/" style="margin-bottom: 20px">
+    <input type="submit" value="Back to All Users"/>
+</form>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" border="">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">ID</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">First name</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Last name</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Personal Number</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">E-mail</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Permanent Address</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Address of Correspondence</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${user.userID}" style="text-align:center;"></td>
+    <td th:text="${user.firstName}" style="text-align:center;"></td>
+    <td th:text="${user.lastName}" style="text-align:center;"></td>
+    <td th:text="${user.personalNumber}" style="text-align:center;"></td>
+    <td th:text="${user.email}" style="text-align:center;"></td>
+    <td th:text="${user.permanentAddress.toString()}" style="text-align:center;"></td>
+    <td th:text="${user.addressOfCorrespondence.toString()}" style="text-align:center;"></td>
+    <td><a th:href="@{'/users/edit/' + ${user.userID}}">
+        <button>Edit</button>
+    </a></td>
+    </tbody>
+</table>
+<h1 style="text-align:center;">Insurances of User</h1>
+<div style="width: 300px">
+    <a th:href="@{'/users/id/' + ${user.userID} + '/insurances/add-accident-insurance'}">
+        <button>Add Accident Insurance</button>
+    </a>
+    <a th:href="@{'/users/id/' + ${user.userID} + '/insurances/add-travel-insurance'}">
+        <button>Add Travel Insurance</button>
+    </a>
+    <a th:href="@{'/users/id/' + ${user.userID} + '/insurances/add-house-and-apartment-insurance'}">
+        <button>Add House and Apartment Insurance</button>
+    </a>
+    <a th:href="@{'/users/id/' + ${user.userID} + '/insurances/add-household-insurance'}">
+        <button>Add Household Insurance</button>
+    </a>
+</div>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" border="" style="margin-top:  20px">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of Creation</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of Start</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Date of End</th>
+        <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Monthly Payment</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="insurance: ${user.insurances}">
+        <td th:text="${insurance.dateOfCreation}" style="text-align:center;"></td>
+        <td th:text="${insurance.dateOfStart}" style="text-align:center;"></td>
+        <td th:text="${insurance.dateOfEnd}" style="text-align:center;"></td>
+        <td th:text="${insurance.monthlyPayment}" style="text-align:center;"></td>
+        <td><a th:href="@{'/users/id/'+${user.userID}+'/insurances/id/' + ${insurance.insuranceID}}">
+            <button>Info</button>
+        </a></td>
+        <td>
+            <a th:href="@{'/users/id/'+${user.userID}+'/insurances/id/' + ${insurance.insuranceID} + '/edit-insurance'}">
+                <!--            +${user.userID}+-->
+                <button>Edit</button>
+            </a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

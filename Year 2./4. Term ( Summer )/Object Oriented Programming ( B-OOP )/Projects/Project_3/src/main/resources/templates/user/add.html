@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%; overflow: auto">
+    <h1 style="margin: 10px;">Add User</h1>
+    <form action="#" th:action="@{/users/submit}" th:object="${user}" method="post" >
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="firstName">First name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="firstName" th:field="*{firstName}" />
+            <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="lastName">Last name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="lastName" th:field="*{lastName}" />
+            <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="personalNumber">Personal number<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="personalNumber" th:field="*{personalNumber}" />
+            <p th:if="${#fields.hasErrors('personalNumber')}" th:errors="*{personalNumber}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="email">E-mail<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="email" th:field="*{email}" />
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></p><br>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="permanentAddress.zipCode">Permanent Address : Zip Code<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="permanentAddress.zipCode" th:field="*{permanentAddress.zipCode}" />
+            <p th:if="${#fields.hasErrors('permanentAddress.zipCode')}" th:errors="*{permanentAddress.zipCode}" style="color: red"></p><br>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="permanentAddress.townCityName">Permanent Address : City name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="permanentAddress.townCityName" th:field="*{permanentAddress.townCityName}" />
+            <p th:if="${#fields.hasErrors('permanentAddress.townCityName')}" th:errors="*{permanentAddress.townCityName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="permanentAddress.streetName">Permanent Address : Street name<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="permanentAddress.streetName" th:field="*{permanentAddress.streetName}" />
+            <p th:if="${#fields.hasErrors('permanentAddress.streetName')}" th:errors="*{permanentAddress.streetName}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="permanentAddress.houseNumber">Permanent Address : House number<sup style="color: red">*</sup></label>
+            <input class="mdl-textfield__input"  type="text" id="permanentAddress.houseNumber" th:field="*{permanentAddress.houseNumber}" />
+            <p th:if="${#fields.hasErrors('permanentAddress.houseNumber')}" th:errors="*{permanentAddress.houseNumber}" style="color: red"></p><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfCorrespondence.zipCode">Address of Correspondence : Zip Code</label>
+            <input class="mdl-textfield__input" type="text" id="addressOfCorrespondence.zipCode" th:field="*{addressOfCorrespondence.zipCode}" />
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfCorrespondence.townCityName">Address of Correspondence : City name</label>
+            <input class="mdl-textfield__input" type="text" id="addressOfCorrespondence.townCityName" th:field="*{addressOfCorrespondence.townCityName}" />
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfCorrespondence.streetName">Address of Correspondence : Street name</label>
+            <input class="mdl-textfield__input" type="text" id="addressOfCorrespondence.streetName" th:field="*{addressOfCorrespondence.streetName}" />
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="addressOfCorrespondence.houseNumber">Address of Correspondence : House number</label>
+            <input class="mdl-textfield__input" type="text" id="addressOfCorrespondence.houseNumber" th:field="*{addressOfCorrespondence.houseNumber}" />
+        </div>
+        <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised" style="width: fit-content;"/>
+    </form>
+</div>
+</body>
+</html>

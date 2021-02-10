@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Travel Insurance</title>
+</head>
+<body>
+<div>
+    <h1 style="text-align: center">Add New Travel Insurance</h1>
+    <h4 style="text-align: center">Insurer Information</h4>
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" style="margin-bottom: 20px" border="">
+        <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">ID</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">First name</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Last name</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Personal Number</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">E-mail</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Permanent Address</th>
+            <th class="mdl-data-table__cell--non-numeric" style="text-align:center;">Address of Correspondence</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td th:text="${insurer.userID}" style="text-align:center;"></td>
+        <td th:text="${insurer.firstName}" style="text-align:center;"></td>
+        <td th:text="${insurer.lastName}" style="text-align:center;"></td>
+        <td th:text="${insurer.personalNumber}" style="text-align:center;"></td>
+        <td th:text="${insurer.email}" style="text-align:center;"></td>
+        <td th:text="${insurer.permanentAddress.toString()}" style="text-align:center;"></td>
+        <td th:text="${insurer.addressOfCorrespondence.toString()}" style="text-align:center;"></td>
+
+        </tbody>
+    </table>
+</div>
+<form action="#" th:action="@{'/users/id/' + ${insurer.userID} + '/insurances/add-travel-insurance/submit'}"
+      th:object="${travelInsurance}" method="post">
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="insurance.dateOfStart">Date of Start<sup style="color: red">*</sup></label>
+        <input class="mdl-textfield__input" type="datetime-local" id="insurance.dateOfStart" th:field="*{dateOfStart}"/>
+        <p th:if="${#fields.hasErrors('dateOfStart')}" th:errors="*{dateOfStart}" style="color: red"></p><br>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="insurance.dateOfEnd">Date of End<sup style="color: red">*</sup></label>
+        <input class="mdl-textfield__input" type="datetime-local" id="insurance.dateOfEnd" th:field="*{dateOfEnd}"/>
+        <p th:if="${#fields.hasErrors('dateOfEnd')}" th:errors="*{dateOfEnd}" style="color: red"></p><br>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="insurance.grossAmountOfClaims">Gross Amount Of Claims<sup style="color: red">*</sup></label>
+        <input class="mdl-textfield__input" type="number" id="insurance.grossAmountOfClaims"
+               th:field="*{grossAmountOfClaims}"/>
+        <p th:if="${#fields.hasErrors('grossAmountOfClaims')}" th:errors="*{grossAmountOfClaims}" style="color: red"></p><br>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="insurance.monthlyPayment">Monthly Payment<sup style="color: red">*</sup></label>
+        <input class="mdl-textfield__input" type="number" id="insurance.monthlyPayment" th:field="*{monthlyPayment}"/>
+        <p th:if="${#fields.hasErrors('monthlyPayment')}" th:errors="*{monthlyPayment}" style="color: red"></p><br>
+    </div>
+    <div>
+        <label class="mdl-textfield__label" for="insured" style="margin-top: 10px">Insured<sup style="color: red">*</sup></label>
+        <select th:field="*{insured.userID}" id="insured">
+            <option
+                    th:each="insuredperson: ${users}"
+                    th:value="${insuredperson.value.userID} "
+                    th:text="${insuredperson.value.firstName}+' '+${insuredperson.value.lastName}">
+            </option>
+        </select>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="insurance.withinEU">Within EU</label>
+        <input class="mdl-textfield__input" type="checkbox" id="insurance.withinEU" th:field="*{withinEU}"/>
+    </div>
+    <div>
+        <label class="mdl-textfield__label" for="purpose" style="margin-top: 10px">Purpose<sup style="color: red">*</sup></label>
+        <select th:field="*{purpose}" id="purpose">
+            <option
+                    th:each="purposeoftravel: ${purpose}"
+                    th:value="${purposeoftravel} "
+                    th:text="${purposeoftravel.getPurpose()}">
+            </option>
+        </select>
+        <p th:if="${#fields.hasErrors('purpose')}" th:errors="*{purpose}" style="color: red"></p><br>
+    </div>
+    <div>
+        <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised"
+               style="width: fit-content;"/>
+    </div>
+</form>
+</div>
+</body>
+</html>
