@@ -25,7 +25,7 @@ Collection of school assignments and projects
 
 ## Year 2. - Term 2.
 
-Artificial Intelligence ( B-UMINT ) - Artificial intelligence Course - The main goal of this course was to show students the potential of Artificial intelligence mainly Genetic Algorithms, Neural Networks, Fuzzy Systems by programming in Matlab
+[Artificial Intelligence ( B-UMINT )](https://github.com/Raychani1/FEI_STU_Bachelor/tree/main/Year%202./4.%20Term%20(%20Summer%20)/Artificial%20Intelligence%20(%20B-UMINT%20)) - Artificial intelligence Course - The main goal of this course was to show students the potential of Artificial intelligence mainly Genetic Algorithms, Neural Networks, Fuzzy Systems by programming in Matlab
 
 Object Oriented Programming ( B-OOP ) - Java Course - Core fundamentals of OOP, Introduction to the Spring Framework
 
