@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ladislav Rajcsányi - TG</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+<form class="table-generating-form">
+    <h1>Table Generator</h1>
+    <div class="form-input-material">
+        <label for="x">X</label>
+        <input type="text" name="x" id="x" class="form-control-material" required />
+        <p class="error_message" id="x_error">Invalid input</p>
+    </div>
+    <div class="form-input-material">
+        <label for="y">Y</label>
+        <input type="text" name="y" id="y" class="form-control-material" required />
+        <p class="error_message" id="y_error">Invalid input</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-ghost" id="generate">Generate</button>
+</form>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h1>Table with function X - Y</h1>
+        <div id="modal_content_container"></div>
+        <div id="closeContainer">
+            <button id="close" class="submit" type="button">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #120000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236c2aad'/%3E%3Cstop offset='1' stop-color='%23120000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23eb1a55' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23eb1a55' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btn {
+    padding: 8px 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    outline:none !important;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px rgb(172, 30, 119);
+    color: white;
+}
+
+.form-input-material {
+    --input-default-border-color: white;
+    --input-border-bottom-color: white;
+}
+
+.form-input-material input {
+    color: #3b1350;
+    border-radius: 5px;
+    outline:none !important;
+}
+
+.table-generating-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    color: white;
+    background: #3b1350;
+    border-radius: 10px;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.table-generating-form h1 {
+    margin: 0 0 24px 0;
+}
+
+.table-generating-form .form-input-material {
+    margin: 12px 0;
+}
+
+.table-generating-form .btn {
+    width: 100%;
+    margin: 18px 0 9px 0;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(95, 28, 114,0.4);
+}
+
+.modal-content {
+    background-color: rgb(53, 15, 60);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+}
+.modal-content h1 {
+    color: #FFF;
+    text-align: center;
+}
+
+.error_message{
+    display: none;
+    color: red;
+    text-align: center;
+}
+
+#close {
+    margin: 2% auto 1% auto;
+    display: block;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
