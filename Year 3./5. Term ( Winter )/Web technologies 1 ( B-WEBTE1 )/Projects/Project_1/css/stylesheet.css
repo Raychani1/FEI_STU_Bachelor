@@ -1,0 +1,257 @@
+* {
+    margin: 0 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', 'Chakra Petch', cursive;
+    font-size: 1.2rem;
+}
+
+header {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 20vh;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #071A33;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #FE820D;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #04375e;
+}
+
+.active {
+    background-color: #1E5F74;
+}
+
+section {
+    background: #04375e;
+    height: 110vh;
+}
+
+#cvSection {
+    height: 100%;
+}
+
+/* INDEX */
+
+section h2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1.5rem;
+    color: #FBEB5A;
+    text-align: center;
+}
+
+.picture {
+    float: left;
+    margin: 3% 20px 15px 2%;
+    border-radius: 5%;
+}
+
+article {
+    padding: 0 5% 0 5%;
+}
+
+article h4 {
+    font-size: 1.1rem;
+    color: #FBEB5A;
+    text-align: center;
+}
+
+article p {
+    font-weight: 400;
+    color: #FE820D;
+    text-align: justify;
+}
+
+#first_article {
+    padding: 3% 3% 0 3%;
+}
+
+#second_article {
+    padding: 8% 8% 0 8%;
+}
+
+aside {
+    margin: 2% 3% 2% 3%;
+    float: right;
+    text-align: justify;
+}
+
+aside p em {
+    font-size: 1.5rem;
+    color: #FE820D;
+    font-family: 'Chakra Petch', 'Balsamiq Sans', cursive;
+}
+
+section ul {
+    display: block;
+    margin-top: 2%;
+}
+
+.location:hover {
+    cursor: pointer;
+}
+
+/* INDEX */
+
+/* CV */
+
+.container {
+    display: flex;
+}
+
+#col1 {
+    background: #FE820D;
+    flex: 1;
+}
+
+#col2 {
+    background: #1E5F74;
+    flex: 2;
+}
+
+.cvPicture {
+    display: block;
+    margin: 5% auto 5% auto;
+    padding: 0;
+    border: solid #04375e 1em;
+    border-radius: 5%;
+}
+
+#col1 ul li {
+    display: block;
+    margin: 3% 2% 3% 20%;
+}
+
+#col1 ul li p {
+    padding-left: 3%;
+}
+
+.icon {
+    width: 7%;
+    height: 7%;
+    vertical-align: middle;
+}
+
+.clickableIcon:hover {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.information {
+    vertical-align: middle;
+    display: inline;
+    padding-left: 5%;
+}
+
+#education li, #language li {
+    list-style-type: none;
+    padding-left: 5%;
+    padding-top: 1%;
+    font-weight: 900;
+}
+
+#education ul li, #language ul li {
+    list-style-type: none;
+    padding-left: 10%;
+    font-weight: initial;
+}
+
+.checked {
+    color: #FE820D;
+}
+
+.skill {
+    background: #FE820D;
+}
+
+.rating {
+    background: #FBEB5A;
+}
+
+#language {
+    padding-bottom: 5%;
+}
+
+.cvTitle {
+    color: #FE820D;
+}
+
+/* CV */
+
+/* TIMETABLE */
+
+table {
+    border-collapse: collapse;
+    background: white;
+    margin: 2% auto 4% auto;
+}
+
+#timeTableHeader, #legend, .day {
+    background: #071A33;
+    color: white;
+}
+
+#legend td {
+    color: initial;
+}
+
+th, td {
+    border: solid black 1px;
+    text-align: center;
+    padding: 18px;
+}
+
+.seminar {
+    background: #FBEB5A;
+}
+
+.lecture {
+    background: #1E5F74;
+}
+
+.physical_education {
+    background: #FE820D;
+}
+
+/* TIMETABLE */
+
+footer {
+    background: #071A33;
+    text-align: center;
+    color: #07a49c;
+}
+
+footer p {
+    padding-top: 1%;
+}
+
+footer a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+footer a:hover {
+    text-decoration: none;
+    color: red;
+}
