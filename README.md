@@ -9,6 +9,8 @@ Collection of school assignments and projects
 - OOP principles
 - Basics of Artificial intelligence, Machine Learning, Fuzzy systems,...
 
+---
+
 ### Year 1. - Term 1.
 
 [Programming 1 ( B-PROG1 )](https://github.com/Raychani1/FEI_STU_Bachelor/tree/main/Year%201./1.%20Term%20(%20Winter%20)/Programming_1_(B-PROG1)) - Python Course - Introduction and deep dive to the Python programming language
