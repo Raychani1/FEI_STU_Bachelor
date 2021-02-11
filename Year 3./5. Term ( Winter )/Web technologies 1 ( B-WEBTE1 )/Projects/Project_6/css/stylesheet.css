@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 110vh;
+    background:#CCC url(../img/stonks.png) center no-repeat;
+    background-size: cover;
+}
+
+#graph{
+    position:relative;
+    width:50%;
+    height:40%;
+    top:9%;
+    left:45%;
+    z-index: 0;
+}
+
+#graph .main-svg{
+    border-radius: 20px;
+    padding: 0;
+}
+
+footer{
+    bottom:0;
+    border-radius: 5%;
+
+}
+footer div p {
+    color: #f79f33;
+    font-size: 1.5rem;
+    text-align: center;
+    background:#001690;
+    margin: 0;
+}
+
+#sin-label{
+    color: #1f77b4;
+}
+
+#cos-label{
+    color: #ff7f0e;
+}
+
+#trace-show{
+    position:absolute;
+    top:-65px;
+    right:0;
+    display: inline-block;
+    background-color: white;
+    padding: 3% 3% 5% 3%;
+    border-radius: 20px;
+    z-index: -1;
+
+}
+
+.js-plotly-plot{
+    border-radius: 10% ;
+}
+
+#control{
+    position: absolute;
+    top:56%;
+    left:68%;
+    text-align:center;
+}
+
+.btn{
+    border-radius: 20px;
+}
+
+.slider {
+    position: relative;
+}
+
+output {
+    position: absolute;
+    left: 50px;
+    padding: .5em;
+    background: blue;
+    color: white;
+}
+
+.volume-control{
+    display: inline-block;
+    padding-top: 2%;
+    padding-right: 10% ;
+}
+
+.volume-control label{
+    color: white;
+}
+
+#control-panel{
+    display: inline-block;
+    padding-left: 50%;
+    padding-top: 10%;
+    z-index: 3;
+}

@@ -1,0 +1,75 @@
+.custom-spinner {
+    position: relative;
+    display: inline-block;
+    margin-left: 1.8rem;
+    float: right;
+}
+
+.custom-spinner:hover {
+    border: 1px solid darkgray;
+    border-radius: .5rem;
+}
+
+.custom-spinner:hover input {
+    border: none;
+}
+
+input {
+    border: 1px solid lightgray;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+input:hover {
+    border-color: green;
+}
+
+.spinner {
+    right: 1px;
+    top: 1px;
+    width: 1.5rem;
+    position: absolute;
+    background: white;
+    border-radius: .5rem;
+    display: block;
+    height: 1.5rem;
+}
+
+.js .spinner {
+    display: block;
+}
+
+.custom-spinner:hover .spinner {
+    right: 0;
+    top: 1px;
+}
+
+.button {
+    position: relative;
+    color: lightgray;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    display: block;
+    line-height: normal;
+}
+
+.button:hover {
+    color: gray;
+}
+
+.button:active {
+    color: darkgray
+}
+
+.up {
+    transform: rotate(-90deg);
+    top: -.5rem;
+}
+
+.down {
+    transform: rotate(-90deg);
+    top: -1.75rem;
+}

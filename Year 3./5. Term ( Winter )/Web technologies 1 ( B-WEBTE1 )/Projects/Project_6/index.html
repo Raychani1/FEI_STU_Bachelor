@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ladislav Rajcsányi - Graf</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/custom_slider.css">
+    <link rel="stylesheet" href="css/custom_spinner.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="icon" href="img/meme_man_logo.png" type="image/x-icon">
+
+</head>
+<body>
+<div id="container">
+    <div id="graph">
+        <div id="trace-show">
+            <input type="checkbox" name="sine" value="sine" id="sine" onclick="showHide()"><span id="sin-label"> Sin </span>
+            <input type="checkbox" name="cosine" value="cosine" id="cosine" onclick="showHide()"><span id="cos-label"> Cos </span><br>
+        </div>
+    </div>
+    <div id=control>
+        <button  class="btn btn-danger" onclick="stop();">Koniec</button>
+    </div>
+    <div id="control-panel">
+        <div class="volume-control">
+            <input type="checkbox" name="text" value="text" id="turn_on_text_input" onclick="toggleInput('text_spinner')">
+            <label for="turn_on_text_input">Text</label>
+            <div class="custom-spinner" id="text_spinner">
+                <input type="text" class="input" value="1" id="value">
+                <div class="spinner">
+                    <button type="button" class="up button">&rsaquo;</button>
+                    <button type="button" class="down button">&lsaquo;</button>
+                </div>
+            </div>
+        </div>
+        <div class="volume-control">
+            <input type="checkbox" name="slider" value="slider" id="turn_on_slider_input" onclick="toggleInput('range_slider')">
+            <label for="turn_on_slider_input">Slider</label>
+            <div class="range-slider" id="range_slider">
+                <input type="range" id="slider" name="slider" min="1" max="10" step="0.5"/>
+                <div class="range-slider__bar"></div>
+                <div class="range-slider__thumb" id="slider_thumb"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/script.js" async defer ></script>
+<script src="js/bootstrap/bootstrap.js"></script>
+</body>
+</html>
