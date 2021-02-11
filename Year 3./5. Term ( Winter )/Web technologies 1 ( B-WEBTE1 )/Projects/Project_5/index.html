@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ladislav Rajcsányi - Google Maps</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR KEY HERE]&callback=myMap&language=sk&libraries=geometry,places&v=weekly" defer></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron-fluid">
+            <img src="img/logo.png" alt="logo" id="logo">
+            <h1 id="title">
+                <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span> Maps
+            </h1>
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-md-2 "></div>
+                <div class="col-md-3 ">
+                    <div class="form-group">
+                        <label for="location">Miesto odkiaľ chcete dostať na fakultu</label>
+                        <input type="text" class="form-control " id="location" placeholder="Enter a Location">
+                    </div>
+                </div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-3 col-sm-12">
+
+                    <div class="form-check-inline" id="travel">
+                        <input class="form-check-input" type="radio" name="travel" id="car" value="DRIVING" checked="checked">
+                        <label class="radio-inline control-label transportation-label" for="car">
+                            <span class="label_text">Auto</span>
+                            <img src="img/car.png" alt="car" class="transportation-logo">
+                        </label>
+
+                        <input class="form-check-input" type="radio" name="travel" id="walk" value="WALKING">
+                        <label class="radio-inline control-label transportation-label" for="walk">
+                            <span class="label_text">Chôdza</span>
+                            <img src="img/walk.png" alt="walk" class="transportation-logo">
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-2 "></div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" id="send">Vypočítaj trasu</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" id="transit">Zobraziť zastávky</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </form>
+
+        <div class="row" id="maps">
+            <div class="col-md-6">
+                <div id="googleMap"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pano"></div>
+            </div>
+        </div>
+        <div id="distance_info" >
+            <p>Vzdialenosť z bodu A do bodu B je: <span id="distance" class="red"></span> km</p>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <p>
+                Copyright &copy; Ladislav Rajcsányi 97914
+            </p>
+        </div>
+    </footer>
+
+    <script src="jquery/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
