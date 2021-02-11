@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ladislav Rajcsányi - Formulár</title>
+    <link rel="icon" href="img/title_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+</header>
+<div class="container">
+    <div class="jumbotron">
+        <img src="img/logo.jpg" alt="logo" id="logo">
+        <h1 id="title">Mr. Robot</h1>
+        <p>Computer Repair with a Smile!</p>
+    </div>
+    <div class="row">
+        <label for="hidden_textarea" class="hidden">Hidden TextArea</label>
+        <textarea id="hidden_textarea" class="hidden" name="Hidden TextArea">
+            Ladislav Rajcsányi 97914
+        </textarea>
+        <div class="col-md-6 col-sm-12 column_one" id="welcome_text">
+            <h1>Vítajte v našom servise!</h1>
+            <br>Počas pandémie aj naši zamestnanci pracujú z domu, preto by sme Vás požiadali aby pre zjednodušenie našej
+            práce vyplnili tento formulár aby sme Vás mohli čo najefektívnejšie a čo najrýchlejšie kontaktovať v prípade
+            dokončenia opravy.<br>
+
+            <h1>Návod</h1>
+            <br>V políčku Meno uveďte Vaše krstné meno, ktorá môže obsahovať  písmená s diakritikou, bohužiaľ čísla
+            tam nesmú byť ( Sorry X Æ A-12 Musk :/ )<br>
+            <br>V políčku Priezvisko uveďte Vaše priezvisko, ktoré takisto môže obsahovať písmená s diakritikou.<br>
+            <br>V políčku Dátum narodenia môžete nastaviť Váš dátum narodenia.<br>
+            <br>V políčku Vek môžete nastaviť Váš vek, ale dávajte pozor aby to bolo v súlade s vyššie uvedením dátumom.<br>
+            <br>V políčku E-mail uveďte Vašu e-mailovú adresu, cez ktorú vás budeme kontaktovať. Vaša e-mailová adresa
+            musí spľňať nasledujúce podmienky:<br>
+            <ul>
+                <li> Musí obsahovať zavináč</li>
+                <li> Minimálne 2 domény, pričom vrcholová doména musí mať 2-4 znaky</li>
+                <li> Pred zavináčom musia byť minimálne 3 znaky</li>
+            </ul>
+
+
+        </div>
+        <div class="col-md-6 col-sm-12 column_two">
+            <h1 class="form_section_title">- Osobné údaje -</h1>
+            <form id="contactForm" action="mailto:lacko9929@gmail.com?subject=Ladislav Rajcsányi - Formulár" method="POST" enctype="text/plain" target="_blank">
+                <div class="form-group">
+                    <label for="first_name" class="required">Meno</label>
+                    <input name="First name" type="text" class="form-control input_field" placeholder="Meno" id="first_name"
+                           title="Uveďte Vaše krsté meno" required>
+                    <p id="first_name_error_message" class="error_message">Meno môže obashovať písmená s
+                        diakritikou</p>
+                </div>
+                <div class="form-group">
+                    <label for="last_name" class="required">Priezvisko</label>
+                    <input name="Last name" type="text" class="form-control" placeholder="Priezvisko" id="last_name"
+                           title="Uveďte Vaše priezvisko" required>
+                    <p id="last_name_error_message" class="error_message">Priezvisko môže obashovať písmená s
+                        diakritikou</p>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate" class="required">Dátum narodenia</label>
+                    <input name="Birthdate" type="date" class="form-control" id="birthdate" title="Nastavte Váš dátum narodenia"
+                           required>
+                    <p id="date_error_message_1" class="error_message">Dátum narodenia nemôže byť väčší ako dnešný dátum!</p>
+                    <p id="date_error_message_2" class="error_message">Dátum narodenia nie je v súlade s vekom!</p>
+                </div>
+                <div class="form-group" >
+                    <label for="age" class="required">Vek</label>
+                    <input name="Age" type="number" class="form-control" placeholder="21" id="age" min="0" required>
+                    <p id="age_error_message" class="error_message">Vek nie je v súlade s dátumom narodenia!</p>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input name="E-mail" type="email" class="form-control" id="email"
+                           placeholder="meno@priklad.sk" required>
+                    <p id="emaial_error_message" class="error_message">Zadali ste nepsrávnu e-mailovú adresu</p>
+                </div>
+
+                <h1 class="form_section_title">- Zariadenie -</h1>
+
+                <div class="form-group">
+                    <p>Platí ešte záruka pre Vaše zariadenie?</p>
+                    <div id="radio_buttons">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="radio" id="yes" name="Warranty" value="Yes" onclick="showAdditionalForm('warranty','no-warranty')">
+                                <label for="yes">Áno</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" id="no" name="Warranty" value="No" onclick="showAdditionalForm('no-warranty','warranty')">
+                                <label for="no">Nie</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="warranty">
+                    <div id="products" class="changing">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="type">Typ</label>
+                                    <select id="type" name="Type" class="form-control changing">
+                                        <option value="notebook">Notebook</option>
+                                        <option value="smartphone">Smartphone</option>
+                                        <option value="tablet">Tablet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="manufacturer">Výrobca</label>
+                                    <select name="Manufacturer" id="manufacturer" class="form-control changing"></select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="model">Model:</label>
+                                    <select name="Model" id="model" class="form-control changing"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    -->
+                    <div class="row ">
+                        <div class="col">
+                            <label for="other_gadget">iné</label>
+                            <input type="checkbox" name="Other" id="other_gadget" onclick="showOtherOptions()">
+                        </div>
+                    </div>
+                    <div id="other" class="changing2">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="other_type">Typ</label>
+                                    <input type="text" class="form-control changing2" placeholder="Camera" id="other_type" name="Other Type">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="other_manufacturer">Výrobca</label>
+                                    <input type="text" class="form-control changing2" placeholder="Canon" id="other_manufacturer" name="Other Manufacturer">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="other_model">Model</label>
+                                    <input type="text" class="form-control changing2" placeholder="EOS R6"  id="other_model" name="Other Model">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    -->
+                </div>
+                <div class="form-group" id="no-warranty">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <label for="problem">Popis</label>
+                            <textarea class="form-control" id="problem" name="problem_description" rows="5" cols="60"
+                                      placeholder="Opíšte nám problém..."></textarea>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger" id="send">Submit</button>
+            </form>
+
+            <p id="info">Položky označené * sú povinné</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div>
+        <p>
+            Copyright &copy; Ladislav Rajcsányi 97914
+        </p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

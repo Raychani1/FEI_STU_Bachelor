@@ -1,0 +1,102 @@
+body{
+    background-color: black !important;
+}
+
+@font-face {
+    font-family: 'mr_robot';
+    src: url(../fonts/MR_ROBOT.ttf);
+}
+.jumbotron{
+    background: transparent !important;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 2rem;
+    color: red;
+}
+
+#title{
+    font-family: "mr_robot", serif;
+}
+
+#logo{
+    width: 20%;
+    height: 20%;
+    float: right;
+}
+
+.column_one{
+    border-radius: 10px;
+    background: red;
+}
+
+.column_two{
+    border-radius: 10px;
+    background-color: #598c8d;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.form_section_title{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 2%;
+}
+
+.column_one{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input{
+    border-radius: 20px !important;
+    border-color: #0c5460 !important;
+    background-color: #b0ceff !important;
+}
+
+#info{
+    text-align: center;
+    color: red;
+}
+
+.btn {
+    display: block !important;
+    margin: 3% auto !important ;
+}
+
+#radio_buttons input{
+    margin-left: 40%;
+}
+
+form p{
+    text-align: center;
+}
+
+textarea{
+    border-radius: 20px !important;
+    border-color: #0c5460 !important;
+    background-color: #b0ceff !important;
+}
+#hidden{
+    display: none;
+}
+
+footer{
+    color: red;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.error_message{
+    color: red;
+    margin-top: 2%;
+    text-align: center;
+}
+
+#welcome_text{
+    /*color: #2b2e4a;*/
+    color:#eeeeee ;
+    /*background-color: #f73859;*/
+    background-color: #303841;
+}
+
