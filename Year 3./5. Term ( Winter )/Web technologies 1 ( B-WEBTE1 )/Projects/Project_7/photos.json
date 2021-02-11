@@ -1,0 +1,41 @@
+{
+  "photos":
+  [
+    {
+      "id": "0",
+      "src": "img/dogs/bern.jpg",
+      "title": "Bernese Mountain Dog",
+      "description": "The Bernese Mountain Dog is a large-sized breed of dog, one of the four breeds of Sennenhund-type dogs from the Swiss Alps."
+    },
+    {
+      "id": "1",
+      "src": "img/dogs/corgi.jpg",
+      "title": "Corgi",
+      "description": "The Welsh Corgi is a small type of herding dog that originated in Wales."
+    },
+    {
+      "id": "2",
+      "src": "img/dogs/german_shepherd.jpg",
+      "title": "German Shepherd",
+      "description": "The German Shepherd is a breed of medium to large-sized working dog that originated in Germany."
+    },
+    {
+      "id": "3",
+      "src": "img/dogs/golden_retriever.jpg",
+      "title": "Golden Retriever",
+      "description": "The Golden Retriever is a medium-large gun dog that was bred to retrieve shot waterfowl, such as ducks and upland game birds, during hunting and shooting parties."
+    },
+    {
+      "id": "4",
+      "src": "img/dogs/husky.jpg",
+      "title": "Husky",
+      "description": "A husky is a sled dog used in the polar regions. One can differentiate huskies from other dog types by their fast pulling-style."
+    },
+    {
+      "id": "5",
+      "src": "img/dogs/rottweiler.jpg",
+      "title": "Rottweiler",
+      "description": "The Rottweiler is a breed of domestic dog, regarded as medium-to-large or large."
+    }
+  ]
+}
