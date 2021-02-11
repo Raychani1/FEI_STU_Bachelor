@@ -31,5 +31,5 @@ Collection of school assignments and projects
 
 ### Year 3. - Term 1.
 
-Web technologies 1 ( B-WEBTE1 ) - Front-end Web Development Course - Building Web pages using HTML5, CSS3, JS, Bootstrap, ... 
+[Web technologies 1 ( B-WEBTE1 )](https://github.com/Raychani1/FEI_STU_Bachelor/tree/main/Year%203./5.%20Term%20(%20Winter%20)/Web%20technologies%201%20(%20B-WEBTE1%20)) - Front-end Web Development Course - Building Web pages using HTML5, CSS3, JS, Bootstrap, ... 
 
