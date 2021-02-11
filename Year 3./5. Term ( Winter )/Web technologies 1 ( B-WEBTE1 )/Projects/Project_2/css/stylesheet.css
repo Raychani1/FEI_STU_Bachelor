@@ -1,0 +1,148 @@
+*{
+    margin: 0 0 0 0 ;
+}
+
+html{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    background:black;
+}
+
+header img{
+    max-width: 100% ;
+    background-size: cover;
+}
+
+h1{
+    color: #8c5c3f;
+    padding-top: 3%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h1:hover {
+    color: white;
+}
+
+.characters {
+    padding: 3% 12% 3% 12%;
+    position: relative;
+    display: inline-block;
+}
+
+.characters img {
+    max-width:100%;
+    display: block;
+}
+
+.tooltip {
+    width:8%;
+    height:8%;
+    background-image: url(../img/person.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.details{
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    display: block;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #8c5c3f;
+    color: #fefefe;
+    padding: 5px;
+    z-index: 1;
+}
+
+.imdb_icon{
+    height: 20%;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imdb_icon:hover{
+    cursor: pointer;
+}
+
+.portrait{
+    border-radius: 15px;
+    padding: 2%;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#John{
+    top:35.5%;
+    left:17.7%;
+}
+
+#Ada{
+    top:33%;
+    left:27%;
+}
+
+#Arthur{
+    top:35%;
+    left:34%;
+}
+
+#Thomas{
+    top:38%;
+    left:47.5%;
+}
+
+#Michael{
+    top:35%;
+    left:64.5%;
+}
+
+#Michael:hover .details,
+#Thomas:hover .details,
+#Arthur:hover .details,
+#Ada:hover .details,
+#John:hover .details {
+    visibility: visible;
+    position: relative;
+}
+
+.name{
+    font-size: 1.5rem;
+    color: #8c5c3f;
+}
+
+h3{
+    color: white;
+}
+
+#sources{
+    padding: 3% 0 3% 3%;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+footer{
+    background: #111010;
+    text-align: center;
+    color: #8c5c3f;
+    height: 5%;
+}
