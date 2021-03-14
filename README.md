@@ -37,5 +37,5 @@ Collection of school assignments and projects
 
 ### Year 3. - Term 2.
 
-[Web technologies 2 ( B-WEBTE2 )]() - Back-end Web Development Course - PHP, Work with MySQL Database, ... 
+[Web technologies 2 ( B-WEBTE2 )](https://github.com/Raychani1/FEI_STU_Bachelor/tree/main/Year%203./6.%20Term%20(%20Summer%20)/Web%20technologies%202%20(%20B-WEBTE2%20)) - Back-end Web Development Course - PHP, Work with MySQL Database, ... 
 
