@@ -1,0 +1,126 @@
+.edit{
+    background-color: #1687a7 !important;
+    border: 1px solid #1687a7fe !important;
+    color: #f6f5f5 !important;
+}
+
+.edit:hover{
+    background-color:  #276678 !important;
+    border: 1px solid #276678fe;
+}
+
+.jumbotron{
+    background-color:  #276678;
+    border-radius: 0 0 30px 30px;
+}
+
+.jumbotron img{
+    height: 10%;
+    width: 20%;
+    margin-left: 5%;
+}
+
+.jumbotron h1{
+    margin-bottom: 2%;
+    margin-left: 40%;
+    margin-top: -10%;
+    padding-bottom: 2.5%;
+    font-size: 5vw;
+    color: #f6f5f5;
+}
+
+.info:hover{
+    color: red !important;
+}
+
+.control{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-radius: 30px !important;
+    background-color: #d3e0ea !important;
+}
+.control:hover{
+    background-color: #f6f5f5 !important;
+    color: #1687a7 !important;
+}
+
+.section_header{
+    text-align: center;
+    padding-top: 2%;
+    margin: 0 auto;
+}
+
+.input_field{
+    font-size: 1.5rem;
+}
+
+.form_field{
+    padding: 1% 0;
+}
+
+.btn-success{
+    margin: 3% 10%;
+    border-radius: 30px !important;
+    padding: 12px !important;
+}
+
+.success{
+    margin-left: 3%;
+    color: green;
+}
+
+.warning{
+    color: red;
+}
+
+body{
+    background-color: #d3e0ea !important;
+    font-family: 'McLaren', cursive !important;
+}
+
+a{
+    color: black !important;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: yellow !important;
+}
+
+table{
+    border: 1px solid black ;
+    margin: 2% auto;
+}
+
+
+th{
+    background-color: #1687a7;
+    color: black;
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+
+tr{
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f6f5f5
+}
+
+tr:nth-child(odd) {
+    background: #d3e0ea
+}
+
+form{
+   margin-left: 40%;
+}
+
+input, select{
+    border-radius: 30px;
+    padding: 8px;
+    outline: none;
+}
